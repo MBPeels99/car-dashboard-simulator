@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="715.0" stylesheets="@application.css" xmlns="http://javafx.com/javafx/17.0.6" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.StartScreenController">
+   <children>
+      <ImageView fx:id="img_car" fitHeight="450.0" fitWidth="715.0" pickOnBounds="true" visible="false">
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+      </ImageView>
+      <Pane id="menu" fx:id="menu" layoutX="40.0" prefHeight="610.0" prefWidth="220.0" />
+      <HBox prefHeight="450.0" prefWidth="715.0">
+         <children>
+            <VBox prefHeight="606.0" prefWidth="211.0">
+               <children>
+                  <Label fx:id="sub_title_label" prefHeight="68.0" prefWidth="175.0" text="Select your vehicle of choice:" textOverrun="CLIP" wrapText="true">
+                     <padding>
+                        <Insets bottom="5.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets top="100.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Button id="btn_gas_car" fx:id="btn_gas_car" mnemonicParsing="false" onMouseClicked="#gasDefaultPressed" prefHeight="26.0" prefWidth="170.0" stylesheets="@application.css" text="Porche 911">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="10.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button id="btn_elec_car" mnemonicParsing="false" onMouseClicked="#electricDefaultPressed" prefHeight="26.0" prefWidth="170.0" text="Quadra Type-66">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="10.0" />
+                     </VBox.margin>
+                  </Button>
+            	  <Button fx:id="btn_start" mnemonicParsing="false" onMouseClicked="#startBtnClicked" prefHeight="26.0" prefWidth="170.0" text="Start" visible="false">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="100.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+               <opaqueInsets>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </opaqueInsets>
+               <padding>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets bottom="2.0" left="60.0" right="2.0" top="2.0" />
+               </HBox.margin>
+            </VBox>
+         </children>
+      </HBox>
+      <Label fx:id="title_label" prefHeight="98.0" prefWidth="567.0" text="Driving Simulator" textOverrun="CLIP">
+         <font>
+            <Font name="HoloLens MDL2 Assets" size="28.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

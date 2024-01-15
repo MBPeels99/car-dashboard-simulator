@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import eu.hansolo.medusa.Gauge?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane fx:id="anchorpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#handleKeyPressed" onKeyReleased="#handleKeyReleased" prefHeight="600.0" prefWidth="1010.0" style="-fx-background-color: #5A5A5A;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainController">
+   <children>
+      <Pane layoutY="300.0" prefHeight="400.0" prefWidth="1150.0" style="-fx-background-color: #222222;" />
+      <BorderPane layoutY="74.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1010.0">
+         <center>
+            <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="874.0" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="246.0" prefWidth="487.0" style="-fx-background-color: #00008B;">
+                     <children>
+                        <Gauge fx:id="gaugeSpeed" lcdDesign="BLUE" lcdFont="LCD" ledOn="true" ledVisible="true" skinType="MODERN" unit="KM/H" />
+                        <VBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="239.0" prefWidth="200.0">
+                           <children>
+                              <HBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: #ADD8E6;">
+                                 <children>
+                                    <ImageView fx:id="gear_icon_img_view" fitHeight="30.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../gear_icon.png" />
+                                       </image>
+                                       <HBox.margin>
+                                          <Insets right="2.0" />
+                                       </HBox.margin>
+                                    </ImageView>
+                                    <ImageView fx:id="shift_up_img_view" fitHeight="30.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../up_icon.png" />
+                                       </image>
+                                       <HBox.margin>
+                                          <Insets right="2.0" />
+                                       </HBox.margin>
+                                    </ImageView>
+                                    <ImageView fx:id="shift_down_img_view" fitHeight="30.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../down_icon.png" />
+                                       </image>
+                                       <HBox.margin>
+                                          <Insets right="2.0" />
+                                       </HBox.margin>
+                                    </ImageView>
+                                    <ImageView fx:id="head_light_img_view" fitHeight="30.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../high_beam.png" />
+                                       </image>
+                                       <HBox.margin>
+                                          <Insets right="2.0" />
+                                       </HBox.margin>
+                                    </ImageView>
+                                    <ImageView fx:id="refuel_icon_img_view" fitHeight="30.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../icons8-fuel-24.png" />
+                                       </image>
+                                       <HBox.margin>
+                                          <Insets right="2.0" />
+                                       </HBox.margin>
+                                    </ImageView>
+                                    <ImageView fx:id="windscreen_wiper_img_view" fitHeight="30.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../windscreen_icon.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                                 <padding>
+                                    <Insets left="5.0" />
+                                 </padding>
+                              </HBox>
+                              <HBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: #ADD8E6;">
+                                 <children>
+                                    <ImageView fx:id="left_indicator_img_view" fitHeight="30.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../icons8-left-arrow-80.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fx:id="right_indicator_img_view" fitHeight="30.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../icons8-right-arrow-80.png" />
+                                       </image>
+                                       <HBox.margin>
+                                          <Insets left="140.0" />
+                                       </HBox.margin>
+                                    </ImageView>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #ADD8E6;">
+                                 <children>
+                                    <Gauge fx:id="fuel_gauge" minHeight="-Infinity" minWidth="-Infinity" prefHeight="70.0" prefWidth="200.0" skinType="SLIM" />
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <Gauge fx:id="guage_rpm" maxValue="8.0" skinType="MODERN" smoothing="true" unit="RPM x 1000" />
+                     </children>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets left="170.0" right="200.0" />
+               </padding>
+               <BorderPane.margin>
+                  <Insets top="5.0" />
+               </BorderPane.margin>
+            </VBox>
+         </center>
+         <right>
+            <HBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="377.0" prefWidth="146.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="power_btn" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="50.0" prefWidth="90.0">
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                     <graphic>
+                        <ImageView fx:id="power_btn_img_view" fitHeight="40.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../power_on_icon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="light_btn" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="60.0" text="Light">
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="windscreen_btn" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="60.0" text="Wiper" />
+               </children>
+               <BorderPane.margin>
+                  <Insets top="200.0" />
+               </BorderPane.margin>
+               <padding>
+                  <Insets right="20.0" />
+               </padding>
+            </HBox>
+         </right>
+      </BorderPane>
+      <ImageView fx:id="steer_wheel" fitHeight="742.0" fitWidth="838.0" pickOnBounds="true">
+         <image>
+            <Image url="@../steerWheel.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

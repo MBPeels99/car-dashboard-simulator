@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import eu.hansolo.medusa.Gauge?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane id="borderpane" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#handleKeyPressed" onKeyReleased="#handleKeyReleased" prefHeight="1030.0" prefWidth="1010.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainController">
+   <top>
+      <VBox BorderPane.alignment="CENTER">
+         <children>
+            <MenuBar GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Close" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="About" />
+                  </items>
+                </Menu>
+              </menus>
+               <GridPane.margin>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </GridPane.margin>
+            </MenuBar>
+            <HBox>
+               <effect>
+                  <Glow />
+               </effect>
+            </HBox>
+         </children>
+      </VBox>
+   </top>
+   <center>
+      <GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1030.0" prefWidth="300.0" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button fx:id="light_btn" minHeight="30.0" minWidth="65.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="65.0" GridPane.columnIndex="1">
+               <graphic>
+                  <ImageView fx:id="img_view_light_btn" fitHeight="25.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic></Button>
+            <Button fx:id="windscreen_btn" minHeight="30.0" minWidth="65.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="65.0">
+               <graphic>
+                  <ImageView fx:id="windscreen_img_view" fitHeight="25.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+            </Button>
+         </children>
+      </GridPane>
+   </center>
+   <left>
+      <VBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="680.0" prefWidth="650.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="250.0" prefWidth="650.0">
+               <children>
+                  <Gauge fx:id="gaugeSpeed" barEffectEnabled="true" borderPaint="#f4f12100" innerShadowEnabled="true" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="200.0" prefWidth="260.0" skinType="MODERN" />
+                  <Gauge fx:id="guage_rpm" maxValue="6000.0" skinType="SIMPLE_SECTION" />
+                  <Gauge fx:id="fuel_gauge" animated="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="125.0" prefWidth="138.0" skinType="LCD" />
+                  <ImageView fx:id="gear_icon_img_view" fitHeight="30.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true" />
+                  <VBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="70.0">
+                     <children>
+                        <ImageView fx:id="shift_up_img_view" fitHeight="30.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fx:id="shift_down_img_view" fitHeight="30.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <Button fx:id="power_btn" minHeight="30.0" minWidth="65.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="65.0">
+               <graphic>
+                  <ImageView fx:id="power_btn_img_view" fitHeight="25.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+               <VBox.margin>
+                  <Insets left="10.0" />
+               </VBox.margin></Button>
+            <ImageView fx:id="steer_wheel" fitHeight="499.0" fitWidth="716.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </VBox>
+   </left>
+</BorderPane>

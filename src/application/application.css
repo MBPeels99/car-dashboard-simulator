@@ -1,0 +1,109 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+@font-face {
+	src: url("/Cyberpunk/Cyberpunk-Regular.ttf");
+}
+
+
+.root{
+	-fx-background-image: url("/Cyberpunk_2077_login_background.jpg");
+}
+
+.label{
+	-fx-font-size: 11px;
+	-fx-font-weight: bold;
+	-fx-text-fill: #f8ef02;
+}
+
+#title_label{
+	-fx-font-family: "Cyberpunk";
+	-fx-font-size: 45px;		/* Set the font size to 24 pixels */
+	-fx-font-weight: bold;		/* Set the font weight to bold */
+	-fx-text-fill: #f8ef02;		/* Set the text color to yellow */
+	-fx-padding: 0 0 0 10px;	/*Get so margin on the right */
+	-fx-text-alignment: center center;
+	-fx-effect: dropshadow(gaussian, #61e4fa, 0px, 3px, 3px, 2px); /* Add multiple drop shadows */}
+
+#sub_title_label{
+	-fx-font-size: 15px;
+	-fx-font-weight: bold;
+	-fx-text-fill: #f8ef02;
+	-fx-padding: 0 0 0 10px;
+	-fx-text-alignment: left center;
+	-fx-effect: dropshadow(gaussian, #61e4fa, 0px, 1px, 1px, 1px);
+}
+
+#menu{
+	-fx-background-color: 
+    linear-gradient(to bottom, 
+        transparent 0%, 
+        rgba(204, 94, 98, 0.2) 1px,
+        rgba(204, 94, 98, 0.2) 4px,
+        rgba(204, 94, 98, 0.2) 5px,
+        transparent 0.5%
+    ),
+    linear-gradient(to left,
+        rgba(1, 1, 1, 0.9),
+        rgba(1, 1, 1, 0.9) 100%
+    );		
+}
+
+.button{
+	-fx-cursor: pointer;					/* Change the cursor to a pointer on hover */
+	-fx-text-fill: uppercase;				/* Transform the text to uppercase */
+	-fx-background-color: transparent;		/* Set the button background to transparent */
+	
+	/* Layout */
+	-fx-padding:10px;
+	-fx-shape: "M 350 0 L 350 29 L 322 57 L 0 57 L 0 0 Z";
+  	-fx-background-color: transparent;
+  	-fx-border-color: transparent;
+  	-fx-background-radius: 0;
+  	-fx-text-alignment: center left;
+	
+	
+	
+	/* Font */
+	-fx-text-fill: rgba(211, 87, 91, 0.81);
+	-fx-font-size: 12px;
+	/*-fx-background-radius: 5px; 				/* Set the button corner radius */
+	/*-fx-background-insets: 0 5px 5px 0, 0; 	/* Set the button background insets */
+	-fx-effect: dropshadow(gaussian, rgba(211, 87, 91, 0.91), 0px, 1px, 1px, 0px);
+	
+	/* Border */
+	-fx-border-style: solid;		/* Set the border style to solid */
+	-fx-border-width: 2px;			/* Set the border width to 2 pixel */
+	-fx-border-color: transparent;	/* Set the border transparent */
+}
+
+.button:hover{
+	-fx-border-color: #61e4fa;
+	-fx-text-fill: #61e4fa;
+}
+
+#btn_gas_car:pressed:root{
+	-fx-background-image: url("/Silverhand_Porche.jpg");
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
